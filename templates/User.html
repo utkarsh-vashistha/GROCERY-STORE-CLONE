@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="/static/index.css">
+        
+        <title>Growceries</title>
+    </head>
+<body>
+    <nav class="navbar sticky-top bg-body-tertiary" >
+        <div class="container-fluid" >
+          <a class="navbar-brand">
+            <img src="/static/logo.png" alt="Bootstrap" width="200" height="50">
+                <a href="/logout">
+              <button  class="btn btn-sm btn-outline-secondary"  >Logout</button>
+            </a>
+            <a href="/cart">
+              <button  class="btn btn-sm btn-outline-secondary"  >Cart</button>
+            </a>
+          </a>
+        </div>
+      </nav>
+    <h3>Welcome {{username}} !!</h3>
+    {%for one in all%}
+
+<div class="card">
+  <h5 class="card-header">{{one['cat_name']}}</h5>
+
+
+
+    {%for two in all_p%}
+    {% if one['id'] == two['category_id'] %}
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{two['product_name']}}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Price: ₹{{two['price']}}</h6>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Unit: {{two['unit']}}</h6>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Available Quantity: {{two['quantity']}}</h6>
+        <p class="card-text"></p>
+
+        <form action="/add_to_cart/{{ two.id }}" method="post">
+          <input name="user_quantity" type="number" placeholder="Quantity">
+          <button  class="btn btn-sm btn-outline-secondary" type="submit" >Add to cart</button>
+      </form>
+
+      </div>
+    </div>
+      {%endif%}
+    {%endfor%}
+    
+
+  </div>
+
+
+
+</div>
+
+{%endfor%}
+</div>
+</body>
+</html>

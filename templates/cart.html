@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="/static/index.css">
+        
+        <title>Growceries</title>
+    </head>
+<body>
+    <nav class="navbar sticky-top bg-body-tertiary" >
+        <div class="container-fluid" >
+          <a class="navbar-brand">
+            <img src="/static/logo.png" alt="Bootstrap" width="200" height="50">
+                <a href="/logout">
+              <button  class="btn btn-sm btn-outline-secondary"  >Logout</button>
+            </a>
+            <a href="/User">
+              <button  class="btn btn-sm btn-outline-secondary"  >Continue Shopping</button>
+            </a>
+          </a>
+        </div>
+      </nav>
+
+
+    {%for one in all%}
+    {%for two in all_p%}
+    {% if one['product_id'] == two['id'] %}
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{two['product_name']}}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Price: ₹{{two['price']}}</h6>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Unit: {{two['unit']}}</h6>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Quantity: {{one['quantity']}}</h6>
+        <p class="card-text"></p>
+        <form action="/delete_cart/{{ two.id }}" method="post">
+            <button  class="btn btn-sm btn-outline-secondary" type="submit" >remove</button>
+        </form>
+      </div>
+    </div>
+      {%endif%}
+    {%endfor%}
+  </div>
+
+{%endfor%}
+
+<div
+class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+<!-- Copyright -->
+<div class="text-white mb-3 mb-md-0">
+  Project By - UTKARSH VASHISTHA
+  <a href="/thankyou"><button type="button" class="btn btn-success" >Buy Now</button></a>
+  
+</div>
+</body>
+</html>
