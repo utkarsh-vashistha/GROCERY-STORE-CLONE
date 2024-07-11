@@ -5,7 +5,7 @@ multiple sections. Store manager can add section/category and products
 
 
 
-## -Technologies used
+## Technologies used
 - Login Framework used for User >> flask_login, wtforms, flask_bcrypt for encryption.
 - Application code >> Flask
 - Webpages >> Jinja2 templates + Bootstrap for HTML generation and styling
@@ -26,23 +26,23 @@ used.
 
 ## CRUD
 
-### -Create: This operation involves adding new data to a database. It's the
+### 1.Create: This operation involves adding new data to a database. It's the
 process of inserting a new record or entry into a database table. For
 example, adding a new user to a user database, creating a new product
 in an e-commerce system, or adding a new post to a blog.
 
-### -Read: Reading refers to retrieving existing data from a database. This
+### 2.Read: Reading refers to retrieving existing data from a database. This
 operation involves querying the database to fetch specific records or
 information. It's used to display, retrieve, or process data. For example,
 fetching a user's profile information, displaying a list of products, or
 showing comments on a blog post.
 
-### -Update: This operation involves modifying existing data in the database.
+### 3.Update: This operation involves modifying existing data in the database.
 It's used when you need to change the values of one or more fields in a
 record. For example, updating a user's email address, changing the price
 of a product, or editing the content of a blog post.
 
-### -Delete: Deleting refers to removing data from the database. This
+### 4.Delete: Deleting refers to removing data from the database. This
 operation is used to permanently remove a record from the database
 table. For example, removing a user account, deleting a product that's no
 longer available, or deleting comments from a post.
