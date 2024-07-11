@@ -47,5 +47,3 @@ of a product, or editing the content of a blog post.
 operation is used to permanently remove a record from the database
 table. For example, removing a user account, deleting a product that's no
 longer available, or deleting comments from a post.
-
-![1874D3E6-80E0-4078-9D04-6CBE80342D1C_1_206_a](https://github.com/utkarsh-vashistha/GROCERY-STORE-CLONE/assets/96648073/0f772062-2e0e-4de6-8c84-303c8b487d15)
