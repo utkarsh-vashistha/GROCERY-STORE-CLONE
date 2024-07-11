@@ -37,6 +37,7 @@ information. It's used to display, retrieve, or process data. For example,
 fetching a user's profile information, displaying a list of products, or
 showing comments on a blog post.
 
+
 ### 3.Update: This operation involves modifying existing data in the database.
 It's used when you need to change the values of one or more fields in a
 record. For example, updating a user's email address, changing the price
@@ -46,3 +47,5 @@ of a product, or editing the content of a blog post.
 operation is used to permanently remove a record from the database
 table. For example, removing a user account, deleting a product that's no
 longer available, or deleting comments from a post.
+
+![1874D3E6-80E0-4078-9D04-6CBE80342D1C_1_206_a](https://github.com/utkarsh-vashistha/GROCERY-STORE-CLONE/assets/96648073/0f772062-2e0e-4de6-8c84-303c8b487d15)
